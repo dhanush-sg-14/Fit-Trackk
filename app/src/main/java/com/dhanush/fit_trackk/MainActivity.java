@@ -1,26 +1,40 @@
 package com.dhanush.fit_trackk;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.activity.OnBackPressedCallback;
+
+import com.dhanush.fit_trackk.R;
+
 
 public class MainActivity extends AppCompatActivity {
+    WebView webView;
 
-    @SuppressLint("MissingInflatedId")
+    // Handle back button
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        WebView webView = findViewById(R.id.webView); // Make sure you have this in your layout
+        webView.getSettings().setJavaScriptEnabled(true);
+
+        // Load FIRST page (index.html)
+        webView.loadUrl("file:///android_asset/index.html");
+
+        this.getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                if (webView.canGoBack()) {
+                    webView.goBack();
+                } else {
+                    finish();
+                }
+            }
         });
     }
+
+
 }

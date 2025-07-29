@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.dhanush.fit_trackk"
+    namespace = "com.dhanush.fittrackk"
     compileSdk = 35
 
     defaultConfig {

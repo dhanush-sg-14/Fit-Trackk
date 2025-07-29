@@ -1,12 +1,12 @@
-package com.dhanush.fit_trackk;
+package com.dhanush.fittrackk;
 
 import android.os.Bundle;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.activity.OnBackPressedCallback;
 
-import com.dhanush.fit_trackk.R;
+import com.dhanush.fittrackk.R;
 
 
 public class MainActivity extends AppCompatActivity {

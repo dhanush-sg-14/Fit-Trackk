@@ -1,4 +1,4 @@
-package com.dhanush.fit_trackk;
+package com.dhanush.fittrackk;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.dhanush.fit_trackk", appContext.getPackageName());
+        assertEquals("com.dhanush.fittrackk", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package com.dhanush.fit_trackk;
+package com.dhanush.fittrackk;
 
 import org.junit.Test;
 

@@ -25,5 +25,4 @@ Welcome to Fit Trackk – your all-in-one companion for fitness tracking, workou
 
 ### Clone the repo
 ```bash
-git clone https://github.com/your-username/fittrackk-app.git
-cd fittrackk-app
+Git clone :- https://github.com/dhanush-sg-14/Fit-Trackk.git
